@@ -1,5 +1,7 @@
+import LayoutCV from "../componentes/LayoutCV";
+
 function VistaPrevia() {
-  return <h1>Vista Previa del CV</h1>;
+  return <LayoutCV />;
 }
 
 export default VistaPrevia;
