@@ -1,5 +1,199 @@
+import "../estilos/editor.css";
+import { useContext } from "react";
+import { CVContext } from "../contexto/CVContext";
+
 function Editor() {
-  return <h1>Editor del CV</h1>;
+  const { datosCV, setDatosCV } = useContext(CVContext);
+
+  return (
+    <div className="editor-container">
+
+      <h1>Editor de Currículum</h1>
+
+      <p className="editor-subtitle">
+        Completa tu información profesional para generar tu currículum.
+      </p>
+
+      <form className="editor-form">
+
+        {/* Nombre */}
+
+        <div className="form-group">
+          <label>Nombre Completo</label>
+
+          <input
+            type="text"
+            value={datosCV.nombre}
+            onChange={(e) =>
+              setDatosCV({
+                ...datosCV,
+                nombre: e.target.value,
+              })
+            }
+            placeholder="Ej. Alejandro Contreras"
+          />
+        </div>
+
+        {/* Profesión */}
+
+        <div className="form-group">
+          <label>Profesión</label>
+
+          <input
+            type="text"
+            value={datosCV.profesion}
+            onChange={(e) =>
+              setDatosCV({
+                ...datosCV,
+                profesion: e.target.value,
+              })
+            }
+            placeholder="Ej. Ingeniero en Sistemas Computacionales"
+          />
+        </div>
+
+        {/* Correo */}
+
+        <div className="form-group">
+          <label>Correo Electrónico</label>
+
+          <input
+            type="email"
+            value={datosCV.correo}
+            onChange={(e) =>
+              setDatosCV({
+                ...datosCV,
+                correo: e.target.value,
+              })
+            }
+            placeholder="correo@email.com"
+          />
+        </div>
+
+        {/* Teléfono */}
+
+        <div className="form-group">
+          <label>Teléfono</label>
+
+          <input
+            type="text"
+            value={datosCV.telefono}
+            onChange={(e) =>
+              setDatosCV({
+                ...datosCV,
+                telefono: e.target.value,
+              })
+            }
+            placeholder="+52 312 123 4567"
+          />
+        </div>
+
+        {/* Perfil */}
+
+        <div className="form-group">
+          <label>Perfil Profesional</label>
+
+          <textarea
+            rows="5"
+            value={datosCV.perfil}
+            onChange={(e) =>
+              setDatosCV({
+                ...datosCV,
+                perfil: e.target.value,
+              })
+            }
+            placeholder="Describe tu perfil profesional..."
+          />
+        </div>
+
+        <div className="form-group">
+  <label>Habilidades</label>
+
+  <textarea
+    rows="3"
+    value={datosCV.habilidades}
+    onChange={(e) =>
+      setDatosCV({
+        ...datosCV,
+        habilidades: e.target.value,
+      })
+    }
+    placeholder="React, JavaScript, CSS"
+  />
+</div>
+
+<div className="form-group">
+  <label>Idiomas</label>
+
+  <textarea
+    rows="3"
+    value={datosCV.idiomas}
+    onChange={(e) =>
+      setDatosCV({
+        ...datosCV,
+        idiomas: e.target.value,
+      })
+    }
+    placeholder="Español, Inglés"
+  />
+</div>
+
+<div className="form-group">
+  <label>Educación</label>
+
+  <textarea
+    rows="3"
+    value={datosCV.educacion}
+    onChange={(e) =>
+      setDatosCV({
+        ...datosCV,
+        educacion: e.target.value,
+      })
+    }
+    placeholder="Ingeniería en Sistemas Computacionales"
+  />
+</div>
+
+<div className="form-group">
+  <label>Certificaciones</label>
+
+  <textarea
+    rows="3"
+    value={datosCV.certificaciones}
+    onChange={(e) =>
+      setDatosCV({
+        ...datosCV,
+        certificaciones: e.target.value,
+      })
+    }
+    placeholder="React Fundamentals"
+  />
+</div>
+
+<div className="form-group">
+  <label>Proyectos</label>
+
+  <textarea
+    rows="3"
+    value={datosCV.proyectos}
+    onChange={(e) =>
+      setDatosCV({
+        ...datosCV,
+        proyectos: e.target.value,
+      })
+    }
+    placeholder="Sistema de Gestión Escolar"
+  />
+</div>
+
+        <button type="button">
+          Guardar Información
+        </button>
+
+      </form>
+
+    </div>
+  );
 }
 
 export default Editor;
