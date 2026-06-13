@@ -38,27 +38,31 @@ function LayoutCV() {
         <div className="cv-section">
           <h3>Habilidades</h3>
 
-          <ul>
-          {(datosCV.habilidades || "React\nJavaScript\nCSS")
-          .split("\n")
-          .filter(item => item.trim() !== "")
-          .map((habilidad, index) => (
-          <li key={index}>{habilidad}</li>
-          ))}
+         <ul>
+  {      datosCV.habilidades
+         .split("\n")
+         .filter(item => item.trim() !== "")
+         .map((habilidad, index) => (
+         <li key={index}>
+        • {habilidad}
+        </li>
+         ))}
         </ul>
         </div>
 
         <div className="cv-section">
           <h3>Idiomas</h3>
 
-         <ul>
-         {(datosCV.idiomas || "Español\nInglés")
-         .split("\n")
-         .filter(item => item.trim() !== "")
-         .map((idioma, index) => (
-         <li key={index}>{idioma}</li>
-         ))}
-        </ul>
+        <ul>
+        {datosCV.idiomas
+        .split("\n")
+        .filter(item => item.trim() !== "")
+        .map((idioma, index) => (
+        <li key={index}>
+        • {idioma}
+        </li>
+        ))}
+       </ul>
         </div>
 
         <div className="cv-section">

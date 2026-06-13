@@ -133,12 +133,7 @@
 }
 
 .cv-section ul {
-  list-style-position: inside;
+  list-style: none;
   padding: 0;
   margin: 10px 0;
-}
-
-.cv-section li {
-  margin-bottom: 5px;
-  text-align: center;
 }
