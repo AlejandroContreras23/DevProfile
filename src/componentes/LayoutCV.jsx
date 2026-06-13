@@ -7,7 +7,10 @@ function LayoutCV() {
   const { datosCV } = useContext(CVContext);
 
   return (
-    <div className="cv-container">
+    <div 
+    id="cv-pdf"
+    className="cv-container"
+    >
 
       <div className="cv-sidebar">
 
