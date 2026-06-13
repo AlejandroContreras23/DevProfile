@@ -186,6 +186,22 @@ function Editor() {
   />
 </div>
 
+<div className="form-group">
+  <label>Experiencia Laboral</label>
+
+  <textarea
+    rows="4"
+    value={datosCV.experiencia}
+    onChange={(e) =>
+      setDatosCV({
+        ...datosCV,
+        experiencia: e.target.value,
+      })
+    }
+    placeholder="Describe tu experiencia laboral..."
+  />
+</div>
+
         <button type="button">
           Guardar Información
         </button>

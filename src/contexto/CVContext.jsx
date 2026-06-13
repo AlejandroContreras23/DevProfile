@@ -3,17 +3,18 @@ import { createContext, useState } from "react";
 export const CVContext = createContext();
 
 export function CVProvider({ children }) {
-  const [datosCV, setDatosCV] = useState({
+const [datosCV, setDatosCV] = useState({
   nombre: "",
   profesion: "",
   correo: "",
   telefono: "",
   perfil: "",
-  habilidades: "",
-  idiomas: "",
+  experiencia: "",
+  proyectos: "",
   educacion: "",
   certificaciones: "",
-  proyectos: "",
+  habilidades: "",
+  idiomas: "",
 });
 
   return (

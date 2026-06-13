@@ -17,23 +17,25 @@ function LayoutCV() {
         <div className="cv-section">
           <h3>Contacto</h3>
 
-          <p>
-            {datosCV.correo || "correo@email.com"}
-          </p>
+          <p>{datosCV.correo || "correo@email.com"}</p>
 
-          <p>
-            {datosCV.telefono || "+52 312 123 4567"}
-          </p>
+          <p>{datosCV.telefono || "+52 312 123 4567"}</p>
         </div>
 
         <div className="cv-section">
           <h3>Habilidades</h3>
-          <p> {datosCV.habilidades || "React, JavaScript, CSS"} </p>
+
+          <p>
+            {datosCV.habilidades || "React, JavaScript, CSS"}
+          </p>
         </div>
 
         <div className="cv-section">
           <h3>Idiomas</h3>
-          <p> {datosCV.idiomas || "Español, Inglés"} </p>
+
+          <p>
+            {datosCV.idiomas || "Español, Inglés"}
+          </p>
         </div>
 
       </div>
@@ -52,6 +54,8 @@ function LayoutCV() {
 
         </div>
 
+        {/* PERFIL */}
+
         <div className="cv-section-main">
 
           <h3>Perfil Profesional</h3>
@@ -63,19 +67,56 @@ function LayoutCV() {
 
         </div>
 
+        {/* EXPERIENCIA */}
+
         <div className="cv-section-main">
+
+          <h3>Experiencia Laboral</h3>
+
+          <p>
+            {datosCV.experiencia ||
+              "Auxiliar Administrativo en empresa de servicios."}
+          </p>
+
+        </div>
+
+        {/* PROYECTOS */}
+
+        <div className="cv-section-main">
+
           <h3>Proyectos</h3>
-          <p> {datosCV.proyectos || "Sistema de Gestión Escolar"} </p>
+
+          <p>
+            {datosCV.proyectos ||
+              "Sistema de Gestión Escolar"}
+          </p>
+
         </div>
 
+        {/* EDUCACION */}
+
         <div className="cv-section-main">
+
           <h3>Educación</h3>
-          <p> {datosCV.educacion || "Universidad Autonoma de Aguascalientes"} </p>
+
+          <p>
+            {datosCV.educacion ||
+              "Universidad Autónoma de Aguascalientes"}
+          </p>
+
         </div>
 
+        {/* CERTIFICACIONES */}
+
         <div className="cv-section-main">
+
           <h3>Certificaciones</h3>
-          <p> {datosCV.certificaciones || "React Fundamentals"} </p>
+
+          <p>
+            {datosCV.certificaciones ||
+              "React Fundamentals"}
+          </p>
+
         </div>
 
       </div>

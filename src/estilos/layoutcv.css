@@ -75,3 +75,7 @@
 .cv-section-main h3 {
   color: #2ca7b8;
 }
+
+.cv-section-main p {
+  white-space: pre-line;
+}
