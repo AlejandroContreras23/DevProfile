@@ -9,7 +9,6 @@ function Navbar() {
         <Link to="/">Inicio</Link>
         <Link to="/editor">Editor</Link>
         <Link to="/preview">Vista Previa</Link>
-        <Link to="/dashboard">Dashboard</Link>
         <Link to="/about">Acerca de</Link>
       </div>
     </nav>
