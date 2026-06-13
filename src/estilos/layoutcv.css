@@ -127,3 +127,18 @@
 .btn-pdf:hover {
   opacity: 0.9;
 }
+
+.cv-section p {
+  white-space: pre-line;
+}
+
+.cv-section ul {
+  list-style-position: inside;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.cv-section li {
+  margin-bottom: 5px;
+  text-align: center;
+}
