@@ -5,6 +5,33 @@ import { CVContext } from "../contexto/CVContext";
 function Editor() {
   const { datosCV, setDatosCV } = useContext(CVContext);
 
+const limpiarCV = () => {
+  const datosVacios = {
+    nombre: "",
+    profesion: "",
+    correo: "",
+    telefono: "",
+    perfil: "",
+    habilidades: "",
+    idiomas: "",
+    educacion: "",
+    certificaciones: "",
+    proyectos: "",
+    experiencia: "",
+    foto: "",
+
+    reactNivel: 0,
+    javascriptNivel: 0,
+    nodeNivel: 0,
+    mysqlNivel: 0,
+    mongodbNivel: 0,
+  };
+
+  setDatosCV(datosVacios);
+
+  localStorage.removeItem("datosCV");
+};
+
   return (
     <div className="editor-container">
 
@@ -330,6 +357,13 @@ function Editor() {
         <button type="button">
           Guardar Información
         </button>
+
+        <button type="button"
+          onClick={limpiarCV}
+        >Limpiar CV
+        </button>
+
+      
 
       </form>
 
