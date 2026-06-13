@@ -34,6 +34,31 @@ function Editor() {
           />
         </div>
 
+        <div className="form-group">
+  <label>Fotografía</label>
+
+  <input
+    type="file"
+    accept="image/*"
+    onChange={(e) => {
+      const archivo = e.target.files[0];
+
+      if (archivo) {
+        const lector = new FileReader();
+
+        lector.onloadend = () => {
+          setDatosCV({
+            ...datosCV,
+            foto: lector.result,
+          });
+        };
+
+        lector.readAsDataURL(archivo);
+      }
+    }}
+  />
+</div>
+
         {/* Profesión */}
 
         <div className="form-group">
@@ -106,7 +131,7 @@ function Editor() {
           />
         </div>
 
-        <div className="form-group">
+<div className="form-group">
   <label>Habilidades</label>
 
   <textarea
@@ -118,7 +143,7 @@ function Editor() {
         habilidades: e.target.value,
       })
     }
-    placeholder="React, JavaScript, CSS"
+    placeholder="Ej. React, JavaScript, CSS"
   />
 </div>
 
@@ -126,7 +151,7 @@ function Editor() {
   <label>Idiomas</label>
 
   <textarea
-    rows="3"
+    rows="2"
     value={datosCV.idiomas}
     onChange={(e) =>
       setDatosCV({
@@ -134,7 +159,7 @@ function Editor() {
         idiomas: e.target.value,
       })
     }
-    placeholder="Español, Inglés"
+    placeholder="Ej. Español, Inglés"
   />
 </div>
 

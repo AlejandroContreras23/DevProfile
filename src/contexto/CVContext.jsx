@@ -9,12 +9,13 @@ const [datosCV, setDatosCV] = useState({
   correo: "",
   telefono: "",
   perfil: "",
-  experiencia: "",
-  proyectos: "",
-  educacion: "",
-  certificaciones: "",
   habilidades: "",
   idiomas: "",
+  educacion: "",
+  certificaciones: "",
+  proyectos: "",
+  experiencia: "",
+  foto: "",
 });
 
   return (

@@ -1,6 +1,7 @@
 import "../estilos/layoutcv.css";
 import { useContext } from "react";
 import { CVContext } from "../contexto/CVContext";
+import GraficaHabilidades from "./GraficaHabilidades";
 
 function LayoutCV() {
   const { datosCV } = useContext(CVContext);
@@ -11,8 +12,17 @@ function LayoutCV() {
       <div className="cv-sidebar">
 
         <div className="cv-photo">
-          FOTO
-        </div>
+
+       {datosCV.foto ? (
+       <img
+        src={datosCV.foto}
+        alt="Foto de perfil"
+        className="cv-photo-img"
+       />
+       ) : ("FOTO")
+      }
+
+</div>
 
         <div className="cv-section">
           <h3>Contacto</h3>
@@ -38,6 +48,11 @@ function LayoutCV() {
           </p>
         </div>
 
+        <div className="cv-section">
+           <h3>Nivel Técnico</h3>
+           <GraficaHabilidades />
+        </div>
+
       </div>
 
       <div className="cv-main">
@@ -45,7 +60,7 @@ function LayoutCV() {
         <div className="cv-header">
 
           <h1>
-            {datosCV.nombre || "ALEJANDRO CONTRERAS"}
+            {datosCV.nombre || "NOMBRE COMPLETO"}
           </h1>
 
           <h2>

@@ -35,6 +35,15 @@
   border-radius: 50%;
 }
 
+.cv-photo-img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
 .cv-main {
   padding: 40px;
 }
@@ -53,9 +62,11 @@
   margin: 0;
   color: #0f172a;
 
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1.1;
 }
+
+
 
 .cv-header h2 {
   color: #2ca7b8;
@@ -63,7 +74,7 @@
   margin-top: 10px;
   margin-bottom: 0;
 
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
@@ -78,4 +89,24 @@
 
 .cv-section-main p {
   white-space: pre-line;
+}
+
+.cv-section {
+  text-align: center;
+}
+
+.cv-section p {
+  white-space: pre-line;
+}
+
+.cv-sidebar canvas {
+  margin-top: 20px;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.grafica-container {
+  width: 150px;
+  margin: 20px auto;
 }
