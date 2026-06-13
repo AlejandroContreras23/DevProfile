@@ -24,6 +24,12 @@ export function CVProvider({ children }) {
           proyectos: "",
           experiencia: "",
           foto: "",
+
+          reactNivel: 90,
+          javascriptNivel: 85,
+          nodeNivel: 80,
+          mysqlNivel: 75,
+          mongodbNivel: 70,
         };
 
   });
@@ -32,6 +38,7 @@ export function CVProvider({ children }) {
 
     localStorage.setItem(
       "datosCV",
+      
       JSON.stringify(datosCV)
     );
 

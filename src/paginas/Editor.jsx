@@ -34,30 +34,32 @@ function Editor() {
           />
         </div>
 
+        {/* Fotografía */}
+
         <div className="form-group">
-  <label>Fotografía</label>
+          <label>Fotografía</label>
 
-  <input
-    type="file"
-    accept="image/*"
-    onChange={(e) => {
-      const archivo = e.target.files[0];
+          <input
+            type="file"
+            accept="image/*"
+            onChange={(e) => {
+              const archivo = e.target.files[0];
 
-      if (archivo) {
-        const lector = new FileReader();
+              if (archivo) {
+                const lector = new FileReader();
 
-        lector.onloadend = () => {
-          setDatosCV({
-            ...datosCV,
-            foto: lector.result,
-          });
-        };
+                lector.onloadend = () => {
+                  setDatosCV({
+                    ...datosCV,
+                    foto: lector.result,
+                  });
+                };
 
-        lector.readAsDataURL(archivo);
-      }
-    }}
-  />
-</div>
+                lector.readAsDataURL(archivo);
+              }
+            }}
+          />
+        </div>
 
         {/* Profesión */}
 
@@ -131,101 +133,199 @@ function Editor() {
           />
         </div>
 
-<div className="form-group">
-  <label>Habilidades</label>
+        {/* Habilidades */}
 
-  <textarea
-    rows="3"
-    value={datosCV.habilidades}
-    onChange={(e) =>
-      setDatosCV({
-        ...datosCV,
-        habilidades: e.target.value,
-      })
-    }
-    placeholder="Ej. React, JavaScript, CSS"
-  />
-</div>
+        <div className="form-group">
+          <label>Habilidades</label>
 
-<div className="form-group">
-  <label>Idiomas</label>
+          <textarea
+            rows="3"
+            value={datosCV.habilidades}
+            onChange={(e) =>
+              setDatosCV({
+                ...datosCV,
+                habilidades: e.target.value,
+              })
+            }
+            placeholder="React, JavaScript, CSS"
+          />
+        </div>
 
-  <textarea
-    rows="2"
-    value={datosCV.idiomas}
-    onChange={(e) =>
-      setDatosCV({
-        ...datosCV,
-        idiomas: e.target.value,
-      })
-    }
-    placeholder="Ej. Español, Inglés"
-  />
-</div>
+        {/* Idiomas */}
 
-<div className="form-group">
-  <label>Educación</label>
+        <div className="form-group">
+          <label>Idiomas</label>
 
-  <textarea
-    rows="3"
-    value={datosCV.educacion}
-    onChange={(e) =>
-      setDatosCV({
-        ...datosCV,
-        educacion: e.target.value,
-      })
-    }
-    placeholder="Universidad Autonoma de Aguascalientes"
-  />
-</div>
+          <textarea
+            rows="2"
+            value={datosCV.idiomas}
+            onChange={(e) =>
+              setDatosCV({
+                ...datosCV,
+                idiomas: e.target.value,
+              })
+            }
+            placeholder="Español, Inglés"
+          />
+        </div>
 
-<div className="form-group">
-  <label>Certificaciones</label>
+        {/* Educación */}
 
-  <textarea
-    rows="3"
-    value={datosCV.certificaciones}
-    onChange={(e) =>
-      setDatosCV({
-        ...datosCV,
-        certificaciones: e.target.value,
-      })
-    }
-    placeholder="React Fundamentals"
-  />
-</div>
+        <div className="form-group">
+          <label>Educación</label>
 
-<div className="form-group">
-  <label>Proyectos</label>
+          <textarea
+            rows="3"
+            value={datosCV.educacion}
+            onChange={(e) =>
+              setDatosCV({
+                ...datosCV,
+                educacion: e.target.value,
+              })
+            }
+            placeholder="Universidad Autónoma de Aguascalientes"
+          />
+        </div>
 
-  <textarea
-    rows="3"
-    value={datosCV.proyectos}
-    onChange={(e) =>
-      setDatosCV({
-        ...datosCV,
-        proyectos: e.target.value,
-      })
-    }
-    placeholder="Sistema de Gestión Escolar"
-  />
-</div>
+        {/* Certificaciones */}
 
-<div className="form-group">
-  <label>Experiencia Laboral</label>
+        <div className="form-group">
+          <label>Certificaciones</label>
 
-  <textarea
-    rows="4"
-    value={datosCV.experiencia}
-    onChange={(e) =>
-      setDatosCV({
-        ...datosCV,
-        experiencia: e.target.value,
-      })
-    }
-    placeholder="Describe tu experiencia laboral..."
-  />
-</div>
+          <textarea
+            rows="3"
+            value={datosCV.certificaciones}
+            onChange={(e) =>
+              setDatosCV({
+                ...datosCV,
+                certificaciones: e.target.value,
+              })
+            }
+            placeholder="React Fundamentals"
+          />
+        </div>
+
+        {/* Proyectos */}
+
+        <div className="form-group">
+          <label>Proyectos</label>
+
+          <textarea
+            rows="3"
+            value={datosCV.proyectos}
+            onChange={(e) =>
+              setDatosCV({
+                ...datosCV,
+                proyectos: e.target.value,
+              })
+            }
+            placeholder="Sistema de Gestión Escolar"
+          />
+        </div>
+
+        {/* Experiencia */}
+
+        <div className="form-group">
+          <label>Experiencia Laboral</label>
+
+          <textarea
+            rows="4"
+            value={datosCV.experiencia}
+            onChange={(e) =>
+              setDatosCV({
+                ...datosCV,
+                experiencia: e.target.value,
+              })
+            }
+            placeholder="Describe tu experiencia laboral..."
+          />
+        </div>
+
+        {/* NIVELES DE LA GRÁFICA */}
+
+        <h2 style={{ marginTop: "30px", textAlign: "center" }}>
+          Nivel Técnico
+        </h2>
+
+        <div className="form-group">
+          <label>React (%)</label>
+          <input
+            type="number"
+            min="0"
+            max="100"
+            value={datosCV.reactNivel}
+            onChange={(e) =>
+              setDatosCV({
+                ...datosCV,
+                reactNivel: Number(e.target.value),
+              })
+            }
+          />
+        </div>
+
+        <div className="form-group">
+          <label>JavaScript (%)</label>
+          <input
+            type="number"
+            min="0"
+            max="100"
+            value={datosCV.javascriptNivel}
+            onChange={(e) =>
+              setDatosCV({
+                ...datosCV,
+                javascriptNivel: Number(e.target.value),
+              })
+            }
+          />
+        </div>
+
+        <div className="form-group">
+          <label>Node.js (%)</label>
+          <input
+            type="number"
+            min="0"
+            max="100"
+            value={datosCV.nodeNivel}
+            onChange={(e) =>
+              setDatosCV({
+                ...datosCV,
+                nodeNivel: Number(e.target.value),
+              })
+            }
+          />
+        </div>
+
+        <div className="form-group">
+          <label>MySQL (%)</label>
+          <input
+            type="number"
+            min="0"
+            max="100"
+            value={datosCV.mysqlNivel}
+            onChange={(e) =>
+              setDatosCV({
+                ...datosCV,
+                mysqlNivel: Number(e.target.value),
+              })
+            }
+          />
+        </div>
+
+        <div className="form-group">
+          <label>MongoDB (%)</label>
+          <input
+            type="number"
+            min="0"
+            max="100"
+            value={datosCV.mongodbNivel}
+            onChange={(e) =>
+              setDatosCV({
+                ...datosCV,
+                mongodbNivel: Number(e.target.value),
+              })
+            }
+          />
+        </div>
 
         <button type="button">
           Guardar Información
