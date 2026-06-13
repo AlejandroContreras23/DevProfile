@@ -175,7 +175,7 @@ function Editor() {
         educacion: e.target.value,
       })
     }
-    placeholder="Ingeniería en Sistemas Computacionales"
+    placeholder="Universidad Autonoma de Aguascalientes"
   />
 </div>
 
