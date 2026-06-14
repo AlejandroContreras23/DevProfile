@@ -109,3 +109,103 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+body.tema-claro {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+body.tema-oscuro {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+body.tema-oscuro .hero,
+body.tema-oscuro .editor-container,
+body.tema-oscuro .preview-container,
+body.tema-oscuro .dashboard-container,
+body.tema-oscuro .acerca-container {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+body.tema-oscuro .feature-card,
+body.tema-oscuro .dashboard-card,
+body.tema-oscuro .stat-card,
+body.tema-oscuro .editor-form,
+body.tema-oscuro .cv-preview {
+  background: #1e293b;
+  color: #e5e7eb;
+}
+
+body.tema-oscuro h1,
+body.tema-oscuro h2,
+body.tema-oscuro h3,
+body.tema-oscuro p,
+body.tema-oscuro label {
+  color: #e5e7eb;
+}
+
+body.tema-oscuro input,
+body.tema-oscuro textarea,
+body.tema-oscuro select {
+  background: #334155;
+  color: #ffffff;
+  border: 1px solid #475569;
+}
+
+body.tema-oscuro input::placeholder,
+body.tema-oscuro textarea::placeholder {
+  color: #cbd5e1;
+}
+
+body.letra-chica {
+  font-size: 14px;
+}
+
+body.letra-normal {
+  font-size: 16px;
+}
+
+body.letra-grande {
+  font-size: 19px;
+}
+
+body.letra-chica h1 {
+  font-size: 42px;
+}
+
+body.letra-normal h1 {
+  font-size: 48px;
+}
+
+body.letra-grande h1 {
+  font-size: 56px;
+}
+
+body.letra-chica p,
+body.letra-chica label,
+body.letra-chica input,
+body.letra-chica textarea,
+body.letra-chica button,
+body.letra-chica a {
+  font-size: 14px;
+}
+
+body.letra-normal p,
+body.letra-normal label,
+body.letra-normal input,
+body.letra-normal textarea,
+body.letra-normal button,
+body.letra-normal a {
+  font-size: 16px;
+}
+
+body.letra-grande p,
+body.letra-grande label,
+body.letra-grande input,
+body.letra-grande textarea,
+body.letra-grande button,
+body.letra-grande a {
+  font-size: 19px;
+}

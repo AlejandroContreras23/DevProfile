@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Configuracion from "./Configuracion";
 
 function Navbar() {
   return (
@@ -12,6 +13,7 @@ function Navbar() {
         <Link to="/about">Acerca de</Link>
         <Link to="/dashboard">Dashboard</Link>
       </div>
+      <Configuracion />
     </nav>
   );
 }
