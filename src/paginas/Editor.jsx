@@ -6,7 +6,14 @@ function Editor() {
   const { datosCV, setDatosCV } = useContext(CVContext);
 
 const limpiarCV = () => {
-  const datosVacios = {
+
+  const confirmar = window.confirm(
+    "¿Estás seguro de que deseas eliminar toda la información del currículum?"
+  );
+
+  if (!confirmar) return;
+
+  setDatosCV({
     nombre: "",
     profesion: "",
     correo: "",
@@ -25,11 +32,21 @@ const limpiarCV = () => {
     nodeNivel: 0,
     mysqlNivel: 0,
     mongodbNivel: 0,
-  };
-
-  setDatosCV(datosVacios);
+  });
 
   localStorage.removeItem("datosCV");
+};
+
+const guardarInformacion = () => {
+
+  localStorage.setItem(
+    "datosCV",
+    JSON.stringify(datosCV)
+  );
+
+  alert(
+    "Información guardada correctamente."
+  );
 };
 
   return (
@@ -354,8 +371,10 @@ const limpiarCV = () => {
           />
         </div>
 
-        <button type="button">
-          Guardar Información
+        <button
+        type="button"
+        onClick={guardarInformacion}
+        >Guardar Información
         </button>
 
         <button type="button"
